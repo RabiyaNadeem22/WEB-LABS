@@ -1,0 +1,63 @@
+<html>
+<head>
+<title>LOGIN Form</title>
+<script language="JavaScript" type="text/javaScript">
+
+function validate()
+{
+    var username=document.getElementById("uname").value;
+    var password=document.getElementById("pwd").value;
+    if(username==="")
+    {
+         document.getElementById("u_error").innerHTML = "username not enteredd ";
+         return false;
+     }
+if(password==="")
+    {
+         document.getElementById("u1_error").innerHTML = "empty" ;
+         return false;
+     }
+
+ if(password.length<8)
+    {
+         document.getElementById("u1_error").innerHTML = "password short" ;
+         return false;
+     }
+
+
+if(password.length>20)
+    {
+         document.getElementById("u1_error").innerHTML = "password long" ;
+         return false;
+     }
+
+
+return true;
+}
+
+</script>
+</head>
+<body>
+
+<form nameLOGIN FORM id="form" method=post enctype="multipart/form-data" onsubmit="return validate()">
+<table>
+		 
+	        <p><font color=blue size=5><b>LOGIN_FORM</b></font></p> 
+	   
+	   <tr>
+	    <td> Username:</td><td>   <input type=text name=username id="uname"><div id="u_error"></div> </td>
+          </tr>
+	  
+	   <tr>
+	     <td>Password     : </td><td>    <input type=text name=password id="pwd"><div id="u1_error"></div> </td> 
+	    </tr>
+   <tr><td><input type=submit value='login' class="button"></td><td> Not yet a member?<a href="file:///C:/weblabs/lab%206/signup.html">Register</a></td></tr>
+
+</table>	   
+</form>
+
+
+
+
+</body>
+</html>

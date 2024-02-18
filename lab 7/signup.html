@@ -1,0 +1,123 @@
+<html>
+<head>
+<title>Sign Up Form</title>
+<script language="JavaScript" type="text/javaScript">
+
+function validate()
+{
+     var fname=document.getElementById("fname").value;
+    var lname=document.getElementById("lname").value;
+    var org=document.getElementById("org").value;
+    var email=document.getElementById("email").value;
+     var ph=document.getElementById("phone").value;
+    if(fname==="")
+   {
+      document.getElementById("u_error").innerHTML = "first name not enteredd ";
+      return false;
+   }
+    if(lname==="")
+   {
+      document.getElementById("u1_error").innerHTML = "last name not enteredd ";
+      return false;
+   }
+
+   if(org==="")
+   {
+      document.getElementById("error").innerHTML = "empty field ";
+      return false;
+   }
+   if(email==="")
+   {
+      document.getElementById("error2").innerHTML = "empty field ";
+      return false;
+   }
+
+     return true;
+}
+
+
+function letternumber(event)
+	{
+		var keychar;
+			
+		keychar = event.key;
+		alert(event.key)	
+		
+		// alphas and numbers
+		if (((".+-0123456789").indexOf(keychar) > -1))
+		   return true;
+		else
+		   return false;
+	}
+
+
+
+
+
+
+
+</script>
+</head>
+<body>
+
+<form name=SIGN UP FORM id="form" method=post enctype="multipart/form-data" onsubmit="return validate()">
+<table>
+		 
+	        <p><font color=blue size=3><b>SIGN UP FORM</b></font></p> 
+	   
+	   <tr>
+	    <td> First,Last Name* :</td><td>   <input type=text name=firstname id="fname"> <div id="u_error"></div><input type=text name=lasttname id="lname"><div id="u1_error"></div></td>
+          </tr>
+	  
+	   <tr>
+	     <td>Organization     : </td><td>    <input type=text name=organization id="org" ><div id="error"></div></td> 
+	    </tr>
+	  
+	    <tr> 
+	   <td>  Email Address*   :</td><td>   <input type=email name=emailid id="email"><div id="error2"></div></td>  
+	    </tr> 
+	  
+	     <tr>
+	   <td>  Work Phone       :  </td><td>      <input type=text name=work_phone id="ph"> <div id="error 3"></div></td> 
+	     </tr>
+	  
+	   <tr>  
+	   <td> Home Phone        :   </td><td>     <input type=text name=home_phone onKeyPress="return letternumber(event)"> </td> 
+	    </tr>   
+	    <tr> 
+           <td> Cell Phone        :  </td><td>      <input type=text maxlength=11 name=cell_phone  onKeyPress="return letternumber(event)"></td>  
+           </tr>
+	  <tr>
+	   <td>  Fax              :   </td><td>            <input type=text name=fax onKeyPress="return letternumber(event)" ></td>  	
+</tr>
+     <tr>
+	<td>    Address 1*        :  </td><td>	 <input type=text name=address1 > <br> </td>
+	</tr>  
+           <tr>   
+	   <td> Address 2*        :  </td><td>	 <input type=text name=address2 > <br> </td>
+          </tr>
+          <tr><td> City*              :   </td><td>            <input type=text name=city > </td></tr>
+
+
+         <tr><td> State/Province      :   </td><td>            <input type=text name=province >  </td></tr>
+	     
+	    <tr><td>  Zip/Postal Code :  </td><td>       <input type=text maxlength=4 name=zip >  </td></tr>
+
+
+	    <tr><td> Country*         :   </td><td>            <input type=text name=country > </td></tr>
+	   
+	     
+	     
+	   <tr><td>  *_required fields   </td><td>  <input type=submit value='Signup' class="button"> </td></tr>
+	  
+	     
+	      
+	     
+</table>	   
+</form>
+
+
+
+
+</body>
+</html>
